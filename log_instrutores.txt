@@ -1,0 +1,3 @@
+br.edu.up.Instrutor adicionado: pedro cid
+br.edu.up.Instrutor adicionado: dzd
+br.edu.up.Instrutor removido: dzd

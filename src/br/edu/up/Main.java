@@ -25,6 +25,7 @@ public class Main {
             System.out.println("5. Sair");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
+            scanner.nextLine();
             switch (opcao) {
                 case 1:
                     menuAluno(academia, scanner);
@@ -87,12 +88,14 @@ public class Main {
         String nome = scanner.nextLine();
         System.out.print("Digite o ID do aluno: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.adicionarAluno(new Aluno(nome, id));
     }
 
     public static void removerAluno(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do aluno que deseja remover: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.removerAluno(id);
     }
 
@@ -111,6 +114,7 @@ public class Main {
     public static void pesquisarAluno(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do aluno que deseja pesquisar: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         Aluno aluno = academia.pesquisarAluno(id);
         if (aluno != null) {
             System.out.println("Aluno encontrado: " + aluno);
@@ -130,6 +134,7 @@ public class Main {
             System.out.println("5. Voltar");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
+            scanner.nextLine();
             switch (opcao) {
                 case 1:
                     adicionarTreino(academia, scanner);
@@ -154,15 +159,15 @@ public class Main {
 
     public static void adicionarTreino(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o nome do treino: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.print("Digite a descrição do treino: ");
-        String descricao = scanner.next();
+        String descricao = scanner.nextLine();
         academia.adicionarTreino(new Treino(nome, descricao));
     }
 
     public static void removerTreino(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o nome do treino que deseja remover: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         academia.removerTreino(nome);
     }
 
@@ -180,7 +185,7 @@ public class Main {
 
     public static void pesquisarTreino(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o nome do treino que deseja pesquisar: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         Treino treino = academia.pesquisarTreino(nome);
         if (treino != null) {
             System.out.println("Treino encontrado: " + treino);
@@ -200,6 +205,7 @@ public class Main {
             System.out.println("5. Voltar");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
+            scanner.nextLine();
             switch (opcao) {
                 case 1:
                     adicionarEquipamento(academia, scanner);
@@ -224,15 +230,17 @@ public class Main {
 
     public static void adicionarEquipamento(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o nome do equipamento: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.print("Digite o ID do equipamento: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.adicionarEquipamento(new Equipamento(nome, id));
     }
 
     public static void removerEquipamento(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do equipamento que deseja remover: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.removerEquipamento(id);
     }
 
@@ -251,6 +259,7 @@ public class Main {
     public static void pesquisarEquipamento(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do equipamento que deseja pesquisar: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         Equipamento equipamento = academia.pesquisarEquipamento(id);
         if (equipamento != null) {
             System.out.println("Equipamento encontrado: " + equipamento);
@@ -270,6 +279,7 @@ public class Main {
             System.out.println("5. Voltar");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
+            scanner.nextLine();
             switch (opcao) {
                 case 1:
                     adicionarInstrutor(academia, scanner);
@@ -294,15 +304,17 @@ public class Main {
 
     public static void adicionarInstrutor(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o nome do instrutor: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.print("Digite o ID do instrutor: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.adicionarInstrutor(new Instrutor(nome, id));
     }
 
     public static void removerInstrutor(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do instrutor que deseja remover: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         academia.removerInstrutor(id);
     }
 
@@ -321,6 +333,7 @@ public class Main {
     public static void pesquisarInstrutor(SistemaAcademia academia, Scanner scanner) {
         System.out.print("Digite o ID do instrutor que deseja pesquisar: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         Instrutor instrutor = academia.pesquisarInstrutor(id);
         if (instrutor != null) {
             System.out.println("Instrutor encontrado: " + instrutor);
